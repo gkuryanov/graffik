@@ -1,0 +1,21 @@
+import pygame
+pygame.init()
+screen_width, screen_hight = 640, 480
+screen = pygame.display.set_module((screen_width, screen_high))
+pygame.display.set_caption('graffic')
+points = [[100, 200],[200. 300], [300, 400], [400, 100], [150, 200], [300, 200]]
+WHITE = (255, 255, 255)
+RED = (255, 0, 0)
+BLACK = (0, 0, 0)
+point_radius = 5
+running = True
+while running:
+  for event in pygame.event.get():
+    if event.type == pygame.QUIT:
+      running = False
+  screen.fill(WHITE)
+  pygame.draw.lines(screen, RED, False, point, 2)
+  for point in points:
+    pygame.draw.circle(screen, BLACK, point, poiint_radius)
+  pygame.display.flip()
+pygame.quit()
